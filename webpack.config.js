@@ -1,13 +1,13 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry: './src/index.tsx',
     module: {
         rules: [
             {
-                test: /\.tsx?$/,
+                test: /\.(ts|tsx)$/,
                 use: 'ts-loader',
-                exclude: /node_modules/,
             },
         ],
     },
@@ -17,6 +17,19 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.js',
-        publicPath: 'dist/',
-    }
+    },
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'dist'),
+        },
+        port: 3000,
+        hot: true,
+        open: true,
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './index.html',
+        })
+    ],
+    target: 'web',
 }
