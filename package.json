@@ -11,17 +11,26 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/marked": "^6.0.0",
     "@types/react": "^18.2.60",
     "@types/react-dom": "^18.2.19",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/sanitize-html": "^2.11.0",
     "@types/styled-components": "^5.1.34",
+    "dexie": "^3.2.5",
+    "marked": "^12.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-markdown": "^9.0.1",
+    "react-router-dom": "^6.22.2",
+    "sanitize-html": "^2.12.1",
     "styled-components": "^5.3.11",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.3",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.2"
+    "webpack-dev-server": "^5.0.2",
+    "worker-loader": "^3.0.8"
   },
   "devDependencies": {
     "html-webpack-plugin": "^5.6.0"
